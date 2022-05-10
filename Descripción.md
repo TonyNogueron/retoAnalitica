@@ -1,6 +1,6 @@
-### Emisión de CO2 en automóviles
+# Emisión de CO2 en automóviles
 
-# Antonio Noguerón Bárcenas - A01423759
-# Jorge E. Turner Escalante - A01423182
-# Marco A. GardidaCortés - A01423221
+### Antonio Noguerón Bárcenas - A01423759
+### Jorge E. Turner Escalante - A01423182
+### Marco A. GardidaCortés - A01423221
 
