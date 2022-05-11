@@ -1,0 +1,69 @@
+ST2 - Obtención de estadísticas descriptivas
+
+Output de nuestro programa:
+Primero pedimos un head de nuestra base de datos ya filtrada con las columnas de interés y eliminando
+aquellas filas con celdas vacías.
+
+   year manufacturer transmission_type fuel_type  co_emissions  co2  engine_capacity  noise_level
+0  2000   Alfa Romeo            Manual    Petrol         980.0  195           1598.0         74.0
+1  2000   Alfa Romeo            Manual    Petrol        1105.0  200           1747.0         74.0
+2  2000   Alfa Romeo            Manual    Petrol        1103.0  210           1970.0         74.0
+3  2000   Alfa Romeo            Manual    Petrol         980.0  195           1598.0         73.0
+4  2000   Alfa Romeo            Manual    Petrol        1105.0  200           1747.0         74.0
+5  2000   Alfa Romeo            Manual    Petrol        1103.0  210           1970.0         74.0
+6  2000   Alfa Romeo            Manual    Petrol         919.0  195           1598.0         74.0
+7  2000   Alfa Romeo            Manual    Petrol        1069.0  195           1747.0         74.0
+8  2000   Alfa Romeo         Automatic    Petrol        1078.0  202           1970.0         73.5
+9  2000   Alfa Romeo            Manual    Petrol        1078.0  202           1970.0         73.5
+
+//Aquí podemos observar los tipos de datos de nuestras columnas
+
+year                   int64
+manufacturer          object
+transmission_type     object
+fuel_type             object
+co_emissions         float64
+co2                    int64
+engine_capacity      float64
+noise_level          float64
+dtype: object
+
+               year  co_emissions           co2  engine_capacity   noise_level
+count  44849.000000  44849.000000  44849.000000     44849.000000  44849.000000
+mean    2007.301010    361.473246    189.499833      2176.849317     72.136296
+std        3.813031    255.621259     55.910572       887.235121      1.827449
+min     2000.000000   -200.000000     27.000000       599.000000      0.200000
+25%     2004.000000    189.000000    150.000000      1598.000000     71.000000
+50%     2008.000000    302.600000    180.000000      1985.000000     72.000000
+75%     2011.000000    480.000000    219.000000      2429.000000     73.300000
+max     2013.000000   2100.000000    590.000000      8285.000000     83.000000
+
+
+Rango de year: 13
+Rango de manufacturer: No existe rango para este tipo de dato
+Rango de transmission_type: No existe rango para este tipo de dato
+Rango de fuel_type: No existe rango para este tipo de dato
+Rango de co_emissions: 2300.0
+Rango de co2: 563
+Rango de engine_capacity: 7686.0
+Rango de noise_level: 82.8
+
+Nuestras conclusiones sobre los datos son:
+-Los primeros datos que obtenemos fueron de la columna de año, es el año del coche de nuestro data set.
+Podemos ver que el rango es de 13 años, estos entre el año 2000 y 2013.
+-En la parte de Emisiones de carbono [g/km], podemos ver que el promedio de emisiones es de 361 [g/km],
+aunque también observamos que existe un valor mínimo de -200 y uno máximo de 2100. Estos datos son muy extremos
+y quizá esta columna no nos es tan representativa o necesite más procesamiento antes de encontrar las estadísticas.
+
+-Para la columna de Co2 [g/km]: Aquí podemos ver que los límites no son tan distanciados lo que nos hace creer
+que es una muestra representativa y podemos ver que el promedio de emisiones de CO2 es de 189.499 [g/km].
+
+-Investigando un poquito más sobre el engine engine_capacity, nos dimos cuenta de que se mide en Centímetros Cúbicos
+y lo que representa es el volumen de los cilindros del carro, con esto podemos obtener un poco más de información
+sobre el motor. Ejemplo: un motor con 2000cc de engine_capacity es de 2.0 L https://www.mcnallyinstitute.com/a-2000-cc-car-engine-is-how-many-liters/
+
+-Por último, el noise_level del carro: Se mide en decibeles [dB] y nos indica el ruido que hace el motor,
+eso es para medir un poco sobre la contaminación auditiva del automóvil. https://pulsarinstruments.com/solutions/vehicle-noise/#:~:text=The%20legal%20noise%20level%20for,is%2082%20dB(A).
+Se dice que el límite de decibeles en algunos países no puede pasar los 82 dB y vemos que existe en nuestra
+base de datos un máximo de 83, que estaría sobre el máximo permitido, el noise_level fue de los estadísticos más
+representativos y con la menor desviación estándar.
