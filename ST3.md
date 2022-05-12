@@ -1,3 +1,9 @@
+### Parte 1
+
+En la entrega pasada se realizo la limpia de la base de datos.
+
+### Parte 2
+
 - ¿Qué datos hay que seleccionar? Por qué.
 	
 	Vamos a seleccionar las columnas de:
@@ -57,3 +63,31 @@
 	necesarias para nuestro análisis. Además tendremos que agregar
 	una columna para las variables cualitativas que convertiremos 
 	a valores numéricos.
+
+
+# Parte 3
+
+- ¿Hay alguna variable que no aporta información?
+	Dentro de las variables que hay en la base de datos, todas aportan información, pero 
+	no todas las variables resultan relevantes para lo que queremos analizar.
+
+- Si tuvieras que eliminar variables, ¿Cuáles quitarías y por qué?
+	Eliminamos las variables de otros gases emitidos ya que no tienen correlación con el co2
+	que es la emision de gas que queremos evaluar, podemos pensar que no hay correlación ya que 
+	toda emisión es el resultado de las otras variables.
+
+- ¿Existen variables que tengan datos extraños?
+	Todas las variables tienen o datos numéricos o cualitativos dentro de los que se deben de tener,
+	en este caso contamos con una base de datos bastante limpia. Pero pudimos identificar que dentro de
+	una categoría de los gases emitidos, había valores muy alejados de la media por lo que no deberían de 
+	resultar representativos.
+
+- Si comparas las variables, ¿todas están en rangos similares? ¿Crees que esto afecte?
+	La mayoría de las variables cuantitativas tienen rangos pequeños y una dispersión no muy grande, pero
+	sí hay algunas que tienen valores atípicos que si los incluimos en el análisis probablemente lo obtenido
+	no sea tan representativo.
+
+- ¿Puedes encontrar grupos qué se parezcan? ¿Qué grupos son éstos?
+	No realmente dentro de las variables que tenemos. Lo más cercano serían las emisiones de gases que
+	puedan tener un comportamiento similar ya que todas son la consecuencia de la combustión, pero entre ellas
+	no debería de existir una correlación.
