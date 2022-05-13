@@ -34,3 +34,8 @@
     muy cercanos, tenemos un error promedio de 10%. Nuestro modelo sugiere que sí hay una 
     correlación bastante fuerte entre los regresores seleccionados y la variable dependiente
     que es la emisión de CO2.
+    
+    | Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
